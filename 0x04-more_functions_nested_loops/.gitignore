@@ -1,0 +1,12 @@
+Targets.txt
+Sources.txt
+IncOptions.txt
+LnkOptions.txt
+GIT.php
+new_files/
+views/*.rc
+*.sublime-project
+*.sublime-workspace
+*.o
+*.exe
+instructions.txt
