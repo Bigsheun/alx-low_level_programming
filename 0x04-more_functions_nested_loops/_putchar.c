@@ -1,12 +1,10 @@
 #include <stdio.h>
-#include "main.h"
 /**
-* _putchar - copy puchar
-* @ch: character  to print
+* _putchar - write a character only
+* @c: character
 *
 */
-void _putchar(int ch)
+void _putchar (char c)
 {
-	putchar(ch);
+	putchar(c);
 }
-
