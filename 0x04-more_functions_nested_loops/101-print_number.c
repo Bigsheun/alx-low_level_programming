@@ -5,15 +5,13 @@
 */
 void print_number(int n)
 {
-	unsigned m;
+	unsigned int m;
 
-	
 
 	if (n < 0)
-	{	
+	{
 		_putchar('-');
 		m = -n;
-		
 	}
 	else
 		m = n;
