@@ -1,0 +1,8 @@
+*.txt
+*.php
+new_files/
+views/*
+*.sublime-project
+*.sublime-workspace
+main.c
+Makefile
