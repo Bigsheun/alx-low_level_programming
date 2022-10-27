@@ -1,0 +1,7 @@
+*.php
+*.txt
+*.o
+*.exe
+new_files/
+*.sublime-project
+*.sublime-workspace
