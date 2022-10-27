@@ -4,6 +4,7 @@
 *
 * Return: the converted
 */
+
 char *string_toupper(char *s)
 {
 	int i, gap;

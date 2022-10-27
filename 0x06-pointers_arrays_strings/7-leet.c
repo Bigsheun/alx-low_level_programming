@@ -4,6 +4,7 @@
 *
 * Return: conversion
 */
+
 char c_to_upper(char c)
 {
 	int gap;
@@ -20,6 +21,7 @@ char c_to_upper(char c)
 * section header: Section description
 * Return: description
 */
+
 char leet_dic(char c)
 {
 	int i;
@@ -30,12 +32,14 @@ char leet_dic(char c)
 			return (i + '0');
 	return (c);
 }
+
 /**
 * leet - convert string to leet
 * @s: String to convert
 *
 * Return: converted
 */
+
 char *leet(char *s)
 {
 	int i;

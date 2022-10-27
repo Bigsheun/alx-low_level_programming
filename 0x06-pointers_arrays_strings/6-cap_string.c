@@ -5,6 +5,7 @@
 *
 * Return: true or false
 */
+
 short is_separator(char c)
 {
 	short ttrue = (1 == 1), ffalse = (1 == 0);
@@ -38,12 +39,14 @@ short is_separator(char c)
 	else
 		return (ffalse);
 }
+
 /**
 * c_to_upper - convert character to upper case
 * @c: input character
 *
 * Return: conversion
 */
+
 char c_to_upper(char c)
 {
 	int gap;
@@ -59,6 +62,7 @@ char c_to_upper(char c)
 *
 * Return: conversion
 */
+
 char *cap_string(char *s)
 {
 	int i;
