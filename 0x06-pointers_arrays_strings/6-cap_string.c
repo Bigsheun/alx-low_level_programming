@@ -68,15 +68,16 @@ char *cap_string(char *s)
 	int i;
 
 	s[0] = c_to_uupper(s[0]);
+
 	i = 1;
 	while (s[i] != '\0')
 	{
 		if (is_separator(s[i]))
-			if (s[i + 1] != '\0')
-				s[i + 1] = c_to_upper(s[i + 1]);
+			s[i + 1] = c_to_upper(s[i + 1]);
 		++i;
 	}
 	/*End while*/
+
 	return (s);
 }
 
