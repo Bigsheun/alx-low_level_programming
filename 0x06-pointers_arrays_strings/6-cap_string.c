@@ -1,83 +1,33 @@
 #include "main.h"
 /**
-* is_separator - detects word separators
-* @c: Character to test
-*
-* Return: true or false
-*/
+ * cap_string - capitalizes all words of a string
+ * @s: input string.
+ * Return: the pointer to dest.
+ */
 
-short is_separator(char c)
-{
-	short ttrue = (1 == 1), ffalse = (1 == 0);
-
-	if (c == ' ')
-		return (ttrue);
-	else if (c == '\t')
-		return (ttrue);
-	else if (c == '\n')
-		return (ttrue);
-	else if (c == ',')
-		return (ttrue);
-	else if (c == ';')
-		return (ttrue);
-	else if (c == '.')
-		return (ttrue);
-	else if (c == '!')
-		return (ttrue);
-	else if (c == '?')
-		return (ttrue);
-	else if (c == '"')
-		return (ttrue);
-	else if (c == '(')
-		return (ttrue);
-	else if (c == ')')
-		return (ttrue);
-	else if (c == '{')
-		return (ttrue);
-	else if (c == '}')
-		return (ttrue);
-	else
-		return (ffalse);
-}
-
-/**
-* c_to_upper - convert character to upper case
-* @c: input character
-*
-* Return: conversion
-*/
-
-char c_to_upper(char c)
-{
-	int gap;
-
-	gap = 'a' - 'A';
-	if (c >= 'a' && c <= 'z')
-		return (c - gap);
-	return (c);
-}
-/**
-* cap_string - capitalize words
-* @s: String
-*
-* Return: conversion
-*/
 
 char *cap_string(char *s)
 {
-	int i;
+	int count = 0, i;
+	int separators[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	s[0] = c_to_uupper(s[0]);
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
 
-	i = 1;
-	while (s[i] != '\0')
+	while (*(s + count) != '\0')
 	{
-		if (is_separator(s[i]))
-			s[i + 1] = c_to_upper(s[i + 1]);
-		++i;
-	}
-	/*End while*/
+		for (i = 0; i < 13; i++)
+		{
+			if (*(s + count) == separators[i])
+			{
+				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+					*(s + (count + 1)) = *(s + (count + 1)) - 32;
 
+				break;
+			}
+		}
+		count++;
+	}
 	return (s);
 }
-
