@@ -1,39 +1,44 @@
+#include "main.h"
+
 /**
-* found_in - checks if c is found in s
-* @c: character c
-* @s: String s
-*
-* Return: true if found else false
-*/
-short found_in(char c, char *s)
+ * _strspn - Locates a character in a string
+ * @s: This is the main C string to be scanned.
+ * @accept: This is the string containing the list of characters to match in s
+ * Return: return count
+ **/
+
+unsigned int _strspn(char *s, char *accept)
+
 {
-	short True = (1 == 1), False = (1 == 0);
-	int i;
+	int i, j;
+	int count = 0;
+	char *str1, *str2;
+
+	str1 = s;
+	str2 = accept;
 
 	i = 0;
-	while (c != s[i] && s[i] != '\0')
-		i++;
-	if (s[i] == '\0')
-		return (False);
-	else
-		return (True);
-
-}
-/**
-* _strspn - count number of times initial chars of s found in accept
-* @s: String s
-* @accept: string
-*
-* Return: count
-*/
-unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int i = 0, count = 0;
-
-	while (s[i] != '\0' && found_in(s[i], accept))
+	while (str1[i] != '\0') /*Declaring WHILE *s */
 	{
-		count++;
-		i++;
+		j = 0;
+		while (str2[j] != '\0') /*Declaring WHILE *accept*/
+		{
+			if (str2[j] == str1[i]) /*Evaluate condition*/
+			{
+				count++; /*count number*/
+				break;
+			}
+
+			j++;    /*add j+1*/
+		}
+
+		if (s[i] != accept[j]) /*If aren't equals*/
+		{
+			break;
+		}
+
+		i++; /*add x+1*/
 	}
-	return (count);
+
+	return (count); /*return the value of count*/
 }

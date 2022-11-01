@@ -1,36 +1,30 @@
-/**
-* string_match - does begining of src match accept?
-* @src: source src
-* @accept: accept string
-*
-* Return: true/false
-*/
-short string_match(char *src, char *accept)
-{
-	int i = 0;
-
-	while (src[i] != '\0' && accept[i] != '\0' && src[i] == accept[i])
-		++i;
-	return (accept[i] == '\0');
-}
+#include "main.h"
 
 /**
-* _strstr - find first match of needle in haystack
-* @haystack: String haystack
-* @needle: String needle
-*
-* Return: location pointer
-*/
-char *_strstr(char *haystack, char *needle)
+ * _strstr - first occurrence of the substring needle in the string haystack
+ * @haystack: main str to be examined
+ * @needle: searched in haystack
+ * Return: return 0
+ **/
+
+char  *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
+	char *str1, *str2; /*Declaring variables*/
 
-	while (haystack[i] != '\0' && !string_match(haystack + i, needle))
-		i++;
+	while (*haystack != '\0')
+	{
+		str1 = haystack; /*values*/
+		str2 = needle;
 
-	if (haystack[i] != '\0')
-		return (i + haystack);
-	else
-		return (0);
-
+		/*Star WHILE*/
+		while (*haystack != '\0' && *str2 != '\0' && *haystack == *str2)
+		{
+			haystack++;
+			str2++;
+		}
+		if (*str2 == '\0')
+			return (str1);
+		haystack = str1 + 1;
+	}
+	return (0);
 }
