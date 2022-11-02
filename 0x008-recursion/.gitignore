@@ -1,0 +1,6 @@
+*.txt
+GIT.php
+new_files/
+*.sublime-project
+*.sublime-workspace
+main.c
