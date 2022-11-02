@@ -1,31 +1,47 @@
-#include "main.h"
-
 /**
- * _strpbrk - matches any character specified
- * @s: This is the C string to be scanned.
- * @accept:character in str1 that matches one of the characters in str2
- *Return: string s that matches any character specified in accept
- **/
-
-char *_strpbrk(char *s, char *accept)
+* found_in - checks if c is found in s
+* @c: character c
+* @s: String s
+*
+* Return: true if found else false
+*/
+short found_in(char c, char *s)
 {
-	int j;
+	short True = (1 == 1), False = (1 == 0);
+	int i;
 
-	while (*s != '\0') /*Declaring WHILE*/
-	{
-		j = 0;
-		while (accept[j] != '\0')  /*Evaluating *accept*/
-		{
-			if (*s == accept[j])
-			{
-				return (s);
-			}
-
-			j++; /*add j+1*/
-		}
-
-		s++; /*add s+1*/
-	}
-	return (0);
+	i = 0;
+	while (c != s[i] && s[i] != '\0')
+		i++;
+	if (s[i] == '\0')
+		return (False);
+	else
+		return (True);
 
 }
+
+/**
+* _strpbrk - find starting point of subset
+* @s: string
+* @accept: subset
+*
+* Return: start-point pointer
+*/
+char *_strpbrk(char *s, char *accept)
+{
+	int i, count;
+
+	i = count = 0;
+	if (s[i] == '\0' || accept[i] == '\0')
+		return (0);
+	while (s[i] != '\0' && !found_in(s[i], accept))
+	{
+		i++;
+		count++;
+	}
+	if (s[i] == '\0')
+		return (0);
+	else
+		return (s + count);
+}
+
