@@ -1,0 +1,9 @@
+GIT.php
+new_files/
+views/*
+*.txt
+*.sublime-project
+*.sublime-workspace
+*.exe
+*.o
+main.c
