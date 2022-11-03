@@ -4,3 +4,5 @@ new_files/
 *.sublime-project
 *.sublime-workspace
 main.c
+*.exe
+*.o
