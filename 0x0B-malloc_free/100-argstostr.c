@@ -4,6 +4,7 @@
 * s_cat_nl - concatenate src and new line to dst
 * @dst: dst
 * @src: src
+* @start: start
 *
 * Return: new starting point
 */
