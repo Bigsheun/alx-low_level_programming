@@ -75,8 +75,9 @@ char **strtow(char *str)
 		return (NULL);
 
 	count = count_words(str);
-	/*debug printf("%s\n","str");*/
-	/*allocate array*/
+	if (count == 0)
+		return (NULL);
+
 	dst = malloc(sizeof(char *) * (count + 1));
 	if (dst == NULL)
 		return (NULL);
