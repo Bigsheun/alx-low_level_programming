@@ -1,8 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-/*debug*/
-#include <stdio.h>
-/*debug*/
 /**
 * count_words - count number of words
 * @str: string
@@ -31,7 +28,7 @@ unsigned int count_words(char *str)
 	return (count);
 }
 /**
-* rollback - free allocate array
+* s_rollback - free allocate array
 * @arr: array
 * @size: number of elements to free
 */
@@ -78,12 +75,12 @@ char **strtow(char *str)
 		return (NULL);
 
 	count = count_words(str);
-	/*debug*/printf("%s\n","str");
+	/*debug printf("%s\n","str");*/
 	/*allocate array*/
 	dst = malloc(sizeof(char *) * (count + 1));
 	if (dst == NULL)
 		return (NULL);
-	
+
 	dst[count] = NULL;
 
 	for (i = 0; i < count; i++)
