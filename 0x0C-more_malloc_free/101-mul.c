@@ -3,16 +3,15 @@
 
 /**
 * c_atoi - convert a char to integer.
-* @x: character to convert.
+* @c: character to convert.
 * Return: integer.
 **/
 
-int c_atoi(char x)
+int c_atoi(char c)
 {
-	unsigned int res = 0;
-
-	if (x <= '9' && x >= '0')
-	return (x - '0');
+	if (c <= '9' && c >= '0')
+		return (c - '0');
+	return -1;
 }
 
 /**
