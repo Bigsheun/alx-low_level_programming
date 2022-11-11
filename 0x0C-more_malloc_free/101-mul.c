@@ -11,7 +11,7 @@ int c_atoi(char c)
 {
 	if (c <= '9' && c >= '0')
 		return (c - '0');
-	return -1;
+	return (-1);
 }
 
 /**
