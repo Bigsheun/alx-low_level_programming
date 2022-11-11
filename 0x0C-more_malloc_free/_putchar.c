@@ -1,18 +1,13 @@
 #include <stdio.h>
 
 /**
- *
- * _putchar - display character
- * @c: character
- *
- */
+* _putchar - display character
+* @c: character
+*
+*/
 
 void _putchar(char c)
 
 {
-
-		putchar(c);
-
+	putchar(c);
 }
-
-
