@@ -1,0 +1,10 @@
+*.txt
+GIT.php
+new_files/
+views/
+*.sublime-project
+*.sublime-workspace
+Makefile
+main.c
+*.o
+*.exe
