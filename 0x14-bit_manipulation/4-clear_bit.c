@@ -1,6 +1,6 @@
 /**
 * clear_bit - sets bit at index to 0
-* @n: source number 
+* @n: source number
 * @index: bit index
 *
 * Return: 1 =sucess -1 = fail
