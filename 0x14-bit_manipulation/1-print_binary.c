@@ -9,13 +9,13 @@ void print_binary(unsigned long int n)
 	int count = 0;
 	unsigned long int mask = 1;
 
-	
+
 	for (mask = n; mask; mask >>= 1)
 		count++;
 	/*end-for*/
 
 	mask = 1;
-	mask <<= (count-1);
+	mask <<= (count - 1);
 
 	while (mask)
 	{
@@ -25,6 +25,5 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 		/*end-if*/
 		mask >>= 1;
-			
 	}
 }
