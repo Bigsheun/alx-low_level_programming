@@ -1,3 +1,10 @@
+/**
+* clear_bit - sets bit at index to 0
+* @n: source number 
+* @index: bit index
+*
+* Return: 1 =sucess -1 = fail
+*/
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int count = 0;
